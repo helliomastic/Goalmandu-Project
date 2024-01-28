@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+body{
+    min-height: 100vh;
+    font-family: 'Open Sans';
+}
+
+.sidebar{
+    min-width: 300px;
+    min-height: 100vh;
+    position: absolute;
+    max-height: 100%;
+}
+
+.content{
+    margin-left: 300px;
+    padding: 20px;
+}
+
+.weekly-overview div{
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./admin.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="./Images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">GoalMandu</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Homepage</span>
+                </a></li>
+                <li><a href="#dashboard">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                <li><a href="#upcommings">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">UpComming</span>
+                    
+
+                </a></li>
+               
+                <li><a href="/register-futsal/">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Register futsal</span>
+                </a></li>
+            </ul>
+            
+         
+        </div>
+    </nav>
+<section id="dashboard">
+    <section class="dashboard">
+        <div class="top">
+           
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Bookings</span>
+                        <span class="number">{{total_booking_count}}+</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Total Earned</span>
+                        <span class="number">{{total_earned}}</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Total Futsals</span>
+                        <span class="number">{{tot_fut}}+</span>
+                    </div>
+                </div>
+            </div>
+        
+            <section id="upcommings">
+                
+            <div class="activity">
+                <div class="title">
+                    
+                    <body>
+                        <main class="table" id="customers_table">
+                            <section class="table__header">
+                                <i class="uil uil-clock-three"></i>
+                                <h1 style="margin-left: 10px;">Recent Matches</h1>
+                                <div class="input-group">
+                                    
+                                </div>
+                                <div class="export__file">
+                                    <label for="export-file" class="export__file-btn" title="Export File"></label>
+                                    <input type="checkbox" id="export-file">
+                                    
+                                </div>
+                            </section>
+                            <section class="table__body">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Booked By <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Booked Day <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Time <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Manage <span class="icon-arrow">&UpArrow;</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for b in recent_booking %}
+                                        <tr>
+                                            <td> {{b.id}} </td>
+                                           
+                                            <td> {{b.user.name}}</td>
+                                            <td> {{b.fday()}} </td>
+                                            
+                                            <td> <strong> {{b.date}} </strong></td>
+                                            <td> {{b.ftime()}} </td>
+                                            <td> <strong>{{b.futsal.name}}</strong> </td>
+                                            <td> <button class="btn btn-outline-primary">Edit</button> </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </section>
+                        </main>
+                        <script src="script.js"></script>
+                    
+                    </body>
+                
+        </section>
+            <section id="upcommings">
+                
+            <div class="activity">
+                <div class="title">
+                    
+                    <body>
+                        <main class="table" id="customers_table">
+                            <section class="table__header">
+                                <i class="uil uil-clock-three"></i>
+                                <h1 style="margin-left:5px;">Upcoming Matching</h1>
+                                <div class="input-group">
+                                    
+                                </div>
+                                <div class="export__file">
+                                    <label for="export-file" class="export__file-btn" title="Export File"></label>
+                                    <input type="checkbox" id="export-file">
+                                    
+                                </div>
+                            </section>
+                            <section class="table__body">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Booked By <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Booked Day <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Time <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                                            <th> Manage <span class="icon-arrow">&UpArrow;</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for b in upcoming_booking %}
+                                        <tr>
+                                            <td> {{b.id}} </td>
+                                           
+                                            <td> {{b.user.name}}</td>
+                                            <td> {{b.fday()}} </td>
+                                            
+                                            <td> <strong> {{b.date}} </strong></td>
+                                            <td> {{b.ftime()}} </td>
+                                            <td> <strong>{{b.futsal.name}}</strong> </td>
+                                            <td> <button class="btn btn-outline-primary">Edit</button> </td>
+
+                                        </tr>
+                                        {% endfor %}
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </section>
+                        </main>
+                        <script src="script.js"></script>
+                    
+                    </body>
+                
+        </section>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

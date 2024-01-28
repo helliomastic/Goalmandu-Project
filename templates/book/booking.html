@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7a35258585.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="./date.css" />
+
+</head>
+
+<body class="bg-light">
+    <!-- sidebar -->
+    <div class="bg-dark sidebar">
+        <br>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item p-3 fs-5 text-white" style="background: #343a40;box-shadow: 0px 0px 1px #343a40;">
+                Chyasal futsal
+            </li>
+            <hr style="color: rgba(255, 255, 255, 0.333);">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-square-poll-vertical bi me-2" width="16" height="16"></i>Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <i class="fa-solid fa-book-atlas bi me-2" width="16" height="16"></i>
+                    Booking Overview
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <i class="fa-solid fa-futbol bi me-2" width="16" height="16"></i>
+                    Upcoming Matches
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    <i class="fa-solid fa-basket-shopping bi me-2" width="16" height="16"></i>
+                    Booking History
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- body container -->
+    <div class="d-flex flex-row">
+        <!-- content -->
+        <div class="container-fluid content">
+            <div class="calendar m-auto">
+                <h1 class="display-1">Pick your date</h1>
+                <div class="header">
+                  <div class="month"></div>
+                  <div class="btns">
+                    <div class="btn today-btn">
+                      <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="btn prev-btn">
+                      <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="btn next-btn">
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="weekdays">
+                  <div class="day">Sun</div>
+                  <div class="day">Mon</div>
+                  <div class="day">Tue</div>
+                  <div class="day">Wed</div>
+                  <div class="day">Thu</div>
+                  <div class="day">Fri</div>
+                  <div class="day">Sat</div>
+                </div>
+                <div class="days">
+                  <!-- lets add days using js -->
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./date.js"></script>
+
+</body>
+
+</html>

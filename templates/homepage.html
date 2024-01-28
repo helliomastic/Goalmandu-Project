@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoalMandu</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./football-svgrepo-com.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="/notiflix.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="./readme-images/project-logo1.png" alt="GoalMandu">
+    </a>
+    <ul class="navbar-list">
+      <li>
+        <a href="#home" class="navbar-link">home</a>
+      </li>
+
+      <li>
+        <a href="#about" class="navbar-link">about us</a>
+      </li>
+
+      <li>
+        <a href="/register-futsal" class="navbar-link">Register Futsal</a>
+      </li>
+      <a href="#contact" class="navbar-link">contact us</a>
+    </li>
+    <li>
+      {% if current_user.name %}
+        <a href="/admin" class="btn btn-primary" style="margin: 0px;margin-left:25px;">{{current_user.name}}</a>
+        {% else %}
+        <a href="/login" class="btn btn-primary" style="margin: 0px;margin-left:25px;">Login</a>
+        {% endif %}
+      </li>
+
+
+    </ul>
+
+
+  </header>
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" style="min-height: 100vh;">
+        <div class="container">
+
+          <h2 class="h1 hero-title">GoalMandu is here</h2>
+
+          <p class="hero-text">
+            Ac mi duis mollis. Sapiente? Scelerisque quae, penatibus? Suscipit class corporis nostra rem quos
+            voluptatibus habitant?
+            Fames, vivamus minim nemo enim, gravida lobortis quasi, eum.
+          </p>
+
+          <div class="btn-group">
+            <button class="btn btn-primary">Learn more</button>
+
+            <button class="btn btn-secondary" onclick="book()">Book now</button>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #POPULAR
+      -->
+
+      <section class="popular" id="destination" style="display: flex;">
+        <div class="container-fluid" style="margin: auto;text-align: center;">
+
+          <p class="section-subtitle">Place To Play</p>
+
+          <h2 class="h2 section-title">BEST GOUND BEST SERVICES</h2>
+
+          <p class="section-text">
+            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+            Sit ornare
+            mollitia tenetur, aptent.
+          </p>
+
+          <ul class="popular-list">
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./assets/images/popular-1.jpg" alt="San miguel, italy" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Ampha</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">GoalUp</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./assets/images/popular-2.jpg" alt="Burj khalifa, dubai" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">7WAYS</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">CHAMPIONS</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./assets/images/popular-3.jpg" alt="Kyoto temple, japan" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">SathdoBato</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">HomesUp</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <button class="btn btn-primary">More destination</button>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PACKAGE
+      -->
+
+      <section class="package" id="package" style="display: flex;">
+        <div class="container" style="margin: auto;text-align:center;background:#f3f3f367;padding:10px;">
+
+          <p class="section-subtitle">Package</p>
+
+          <h2 class="h2 section-title">Checkout Our Packeges</h2>
+
+          <p class="section-text">
+            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+            Sit ornare
+            mollitia tenetur, aptent.
+          </p>
+
+          <ul class="package-list">
+
+            <li>
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-1.jpg" alt="Experience The Great Holiday On Beach" loading="lazy">
+                </figure>
+
+                <div class="card-content" style="display: d-flex;flex-direction:column;">
+
+                  <h3 class="h3 card-title">Skills Traning</h3>
+
+                  <p class="card-text">
+                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
+                    cras, aspernatur.
+                  </p>
+
+                  <ul class="card-meta-list" style="margin:auto;">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">1D/2hr</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">Max: 10</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Ampha</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(25 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    Rs.1500
+                    <span>/ per person</span>
+                  </p>
+
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-2.jpg" alt="Summer Holiday To The Oxolotan River" loading="lazy">
+                </figure>
+
+                <div class="card-content" style="display: d-flex;flex-direction:column;">
+
+                  <h3 class="h3 card-title">Player Strategies</h3>
+
+                  <p class="card-text">
+                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
+                    cras, aspernatur.
+                  </p>
+
+                  <ul class="card-meta-list" style="margin:auto;">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">7D/1hr</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">Max: 12</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Chamions</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(20 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    Rs.1200
+                    <span>/ per person</span>
+                  </p>
+
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/packege-3.jpg" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                </figure>
+
+                <div class="card-content" style="display: d-flex;flex-direction:column;">
+
+                  <h3 class="h3 card-title">Goal Club</h3>
+
+                  <p class="card-text">
+                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
+                    cras, aspernatur.
+                  </p>
+
+                  <ul class="card-meta-list" style="margin: auto;">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">NR</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">Group</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">7ways</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(40 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    Rs.2200
+                    <span>/ per person</span>
+                  </p>
+
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <button class="btn btn-primary">View All Packages</button>
+
+        </div>
+      </section>
+      <section class="package" id="about" style="display: flex;">
+        <div class="container" style="margin: auto;text-align:center;padding:10px;display: flex;">        <figure class="about-banner" style="padding-right:10px">
+          <img src="./assets/images/about-banner-1.png" width="540" height="540" loading="lazy" alt="about banner"
+            class="w-100">
+        </figure>
+
+        <div class="about-content" style="padding-left:10px;text-align:left;">
+
+          <p class="about-subtitle" id="about-label-1">Futsal booking platform</p>
+
+          <h2 class="h2 section-title">Goalmandu</h2>
+
+          <p class="section-text text">
+            Don’t get shirty with mein owtto doing with me arse down the problems have it car boot happy days no
+            biggie bevvy only
+            awesome quid I,m goods info my theme flat the lttle rotter cheeky boot happy days
+          </p>
+
+          <ul class="about-list">
+
+            <li class="about-item" style="text-align:left;">
+              <figure class="item-img img-holder" style="--width: 80; --height: 80;">
+                <img src="./assets/images/about-1-1.jpg" width="80" height="80" loading="lazy" alt="Human Contact">
+              </figure>
+
+              <div class="item-content">
+                <h3 class="h4 item-title">Achievement</h3>
+
+                <p class="item-text text">
+                  Book you best ground enjoy your day.
+                </p>
+              </div>
+            </li>
+
+            <li class="about-item" style="text-align:left;">
+              <figure class="item-img img-holder" style="--width: 80; --height: 80;">
+                <img src="./assets/images/about-1-2.jpg" width="80" height="80" loading="lazy" alt="Air Transmission">
+              </figure>
+
+              <div class="item-content">
+                <h3 class="h4 item-title">Best Goal</h3>
+
+                <p class="item-text text">
+                  Our comprehensive Online Marketing strategy will boost your website trafic hence monthly sales.
+                </p>
+              </div>
+            </li>
+
+            <li class="about-item" style="text-align:left;">
+              <figure class="item-img img-holder" style="--width: 80; --height: 80;">
+                <img src="./assets/images/about-1-3.jpg" width="80" height="80" loading="lazy"
+                  alt="Contaminated Objects">
+              </figure>
+
+              <div class="item-content">
+                <h3 class="h4 item-title">Skilled Player</h3>
+
+                <p class="item-text text">
+                  Our comprehensive Online Marketing strategy will boost your website trafic hence monthly sales.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+
+      </div>
+    </div>
+      </section>
+      
+    </article>
+    
+  </main>
+
+
+ 
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="/notiflix.js"></script>
+
+
+  <script>
+    function book() {
+      Notiflix.Loading.hourglass("Finding futsal closest to you. Please allow location access", { messageMaxLength: 82, messageFontSize: "20px", messageColor: "#fff" });
+      navigator.geolocation.getCurrentPosition(okLocation, badLocation)
+    }
+
+    function okLocation(position) {
+      var laltitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      console.log(laltitude, longitude);
+
+      document.location.href = `/book?x=${laltitude}&y=${longitude}`
+    }
+    function badLocation() {
+      console.log("please allow location usage")
+    }
+  </script>
+
+</body>
+
+</html>

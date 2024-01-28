@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoalMandu</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./football-svgrepo-com.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="/notiflix.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+  <main>
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container" style="padding-bottom: 1em;">
+        <h1>About us</h1>
+      </div>
+      <div class="container"  style="min-height: 70vh;">
+
+        <div class="footer-brand" style="min-width: 40vw;">
+
+          <a href="#" class="logo">
+            <img src="./readme-images/logo-1.png" alt="Goalmandu logo">
+          </a>
+
+          <p class="footer-text">
+            Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna conubia
+            at
+            perferendis, pretium, aenean aut ultrices.
+          </p>
+
+        </div>
+
+        <div class="footer-form">
+
+          <img src="./readme-images/goal.png" alt="goal image" style="max-width: 30vw;">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="">codewithsadee</a>. All rights reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Term & Condition</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">FAQ</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="/notiflix.js"></script>
+  
+
+  <script>
+    function book(){
+      Notiflix.Loading.hourglass("Finding futsal closest to you. Please allow location access",{messageMaxLength:82,messageFontSize:"20px",messageColor:"#ccff82"});
+      navigator.geolocation.getCurrentPosition(okLocation,badLocation)
+    }
+
+    function okLocation(position){
+      var laltitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      console.log(laltitude,longitude);
+
+      document.location.href = `/book?x=${laltitude}&y=${longitude}`
+    }
+    function badLocation(){
+      console.log("please allow location usage")
+    }
+  </script>
+
+</body>
+
+</html>
